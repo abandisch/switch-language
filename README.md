@@ -1,1 +1,1 @@
-## Example using React Provider/Context as HOC
+## Example using React HOC
