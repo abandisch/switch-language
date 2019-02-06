@@ -2,27 +2,22 @@ import React, { Component } from 'react'
 import Language from './Language'
 import { connect } from 'react-redux'
 import logo from './logo.svg'
+import languages from './languages'
 import './App.css'
 
 class App extends Component {
   render () {
-    const { language } = this.props
+    const { language: langCode } = this.props
     return (
       <div className='App'>
         <header className='App-header'>
           <img src={logo} className='App-logo' alt='logo' />
-          <p>The selected language is: {language.toUpperCase()}</p>
+          <p>The selected language is: {langCode.toUpperCase()}</p>
           <p>
-            Edit <code>src/App.js</code> and save to reload.
+            <strong>hello</strong>: {languages[langCode].hello}<br />
+            <strong>goodbye</strong>: {languages[langCode].goodbye}<br />
+            <strong>hotel</strong>: {languages[langCode].hotel}<br />
           </p>
-          <a
-            className='App-link'
-            href='https://reactjs.org'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            Learn React
-          </a>
         </header>
       </div>
     )
