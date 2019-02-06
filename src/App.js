@@ -20,11 +20,15 @@ class App extends Component {
 
   render () {
     const { language: langCode } = this.props
+    const languageFullText = {
+      en: 'English',
+      it: 'Italian'
+    }
     return (
       <div className='App'>
         <header className='App-header'>
           <img src={logo} className='App-logo' alt='logo' />
-          <p>The selected language is: {langCode.toUpperCase()}</p>
+          <p>The selected language is: {langCode.toUpperCase()} ({languageFullText[langCode]})</p>
           <p>
             <strong>hello</strong>: {languages[langCode].hello}<br />
             <strong>goodbye</strong>: {languages[langCode].goodbye}<br />
